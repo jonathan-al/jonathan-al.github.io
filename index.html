@@ -55,6 +55,59 @@
         a:hover {
             text-decoration: underline;
         }
+        .project-card {
+            background: #f8f9fa;
+            border: 1px solid #e9ecef;
+            border-radius: 8px;
+            padding: 1.5rem;
+            margin-bottom: 1.5rem;
+            transition: transform 0.2s ease, box-shadow 0.2s ease;
+        }
+        .project-card:hover {
+            transform: translateY(-2px);
+            box-shadow: 0 4px 12px rgba(0,0,0,0.15);
+        }
+        .project-card h3 {
+            color: #2c3e50;
+            margin-top: 0;
+            margin-bottom: 0.5rem;
+        }
+        .project-card p {
+            color: #6c757d;
+            margin-bottom: 1rem;
+        }
+        .project-links {
+            margin-bottom: 1rem;
+        }
+        .project-link {
+            display: inline-block;
+            background: #3498db;
+            color: white !important;
+            padding: 0.5rem 1rem;
+            border-radius: 4px;
+            margin-right: 0.5rem;
+            margin-bottom: 0.5rem;
+            text-decoration: none;
+            font-weight: 500;
+            transition: background-color 0.2s ease;
+        }
+        .project-link:hover {
+            background: #2980b9;
+            text-decoration: none;
+        }
+        .project-tech {
+            display: flex;
+            flex-wrap: wrap;
+            gap: 0.5rem;
+        }
+        .tech-tag {
+            background: #e9ecef;
+            color: #495057;
+            padding: 0.25rem 0.75rem;
+            border-radius: 15px;
+            font-size: 0.85rem;
+            font-weight: 500;
+        }
         @media (max-width: 600px) {
             body {
                 padding: 1rem;
@@ -62,13 +115,18 @@
             .container {
                 padding: 1rem;
             }
+            .project-link {
+                display: block;
+                text-align: center;
+                margin-bottom: 0.5rem;
+            }
         }
     </style>
 </head>
 <body>
     <div class="container">
         <header>
-            <h1>Jonathan Al</h1>
+            <h1>Jonathan Alcantara</h1>
             <p>Welcome to my personal portfolio website!</p>
         </header>
 
@@ -94,8 +152,19 @@
 
             <section>
                 <h2>Projects</h2>
-                <p>Coming soon! I'll be adding my projects here as I develop them.</p>
-                <!-- You can add project cards here later -->
+                <div class="project-card">
+                    <h3>Redux Counter App</h3>
+                    <p>A React application demonstrating Redux state management with counter functionality.</p>
+                    <div class="project-links">
+                        <a href="https://jonathan-al.github.io/redux-counter/" target="_blank" class="project-link">Live Demo</a>
+                        <a href="https://github.com/jonathan-al/redux-counter" target="_blank" class="project-link">Source Code</a>
+                    </div>
+                    <div class="project-tech">
+                        <span class="tech-tag">React</span>
+                        <span class="tech-tag">Redux</span>
+                        <span class="tech-tag">JavaScript</span>
+                    </div>
+                </div>
             </section>
 
             <section>
@@ -109,7 +178,7 @@
             <h2>Get In Touch</h2>
             <p>
                 <strong>GitHub:</strong> <a href="https://github.com/jonathan-al" target="_blank">@jonathan-al</a><br>
-                <strong>Email:</strong> <a href="mailto:your.email@example.com">your.email@example.com</a>
+                <strong>Email:</strong> <a href="mailto:jonathan.informatics@gmail.com">jonathan.informatics@gmail.com</a>
             </p>
             <p><small>Built with ❤️ using GitHub Pages</small></p>
         </footer>
